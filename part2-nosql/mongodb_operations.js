@@ -1,0 +1,264 @@
+use fleximart_nosql;
+
+// ---------------------------
+// Operation 1: Load Data
+// ---------------------------
+
+// Manually insert product catalog
+db.products.drop();
+
+db.products.insertMany([
+  {
+    "product_id": "ELEC001",
+    "name": "Samsung Galaxy S21",
+    "category": "Electronics",
+    "price": 79999,
+    "stock": 150,
+    "specs": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "processor": "Exynos"
+    },
+    "reviews": [
+      {
+        "user": "U001",
+        "rating": 5,
+        "comment": "Excellent phone",
+        "date": "2024-01-15"
+      },
+      {
+        "user": "U002",
+        "rating": 4,
+        "comment": "Good value",
+        "date": "2024-01-18"
+      }
+    ]
+  },
+  {
+    "product_id": "ELEC002",
+    "name": "Laptop Pro 15",
+    "category": "Electronics",
+    "price": 95000,
+    "stock": 40,
+    "specs": {
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    },
+    "reviews": [
+      {
+        "user": "U003",
+        "rating": 5,
+        "comment": "Very fast",
+        "date": "2024-01-20"
+      }
+    ]
+  },
+  {
+    "product_id": "ELEC003",
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 6000,
+    "stock": 200,
+    "specs": {
+      "battery_life": "10 hours"
+    },
+    "reviews": [
+      {
+        "user": "U004",
+        "rating": 3,
+        "comment": "Average sound",
+        "date": "2024-01-22"
+      }
+    ]
+  },
+  {
+    "product_id": "ELEC004",
+    "name": "Smartwatch Z",
+    "category": "Electronics",
+    "price": 12000,
+    "stock": 90,
+    "specs": {
+      "display": "AMOLED",
+      "waterproof": true
+    },
+    "reviews": [
+      {
+        "user": "U005",
+        "rating": 4,
+        "comment": "Nice features",
+        "date": "2024-01-25"
+      }
+    ]
+  },
+  {
+    "product_id": "ELEC005",
+    "name": "LED TV 42 Inch",
+    "category": "Electronics",
+    "price": 38000,
+    "stock": 30,
+    "specs": {
+      "resolution": "4K",
+      "screen_type": "LED"
+    },
+    "reviews": [
+      {
+        "user": "U006",
+        "rating": 5,
+        "comment": "Crystal clear",
+        "date": "2024-01-27"
+      }
+    ]
+  },
+  {
+    "product_id": "FASH001",
+    "name": "Running Shoes",
+    "category": "Fashion",
+    "price": 4000,
+    "stock": 120,
+    "specs": {
+      "size": "9",
+      "color": "Black"
+    },
+    "reviews": [
+      {
+        "user": "U007",
+        "rating": 4,
+        "comment": "Comfortable",
+        "date": "2024-01-28"
+      }
+    ]
+  },
+  {
+    "product_id": "FASH002",
+    "name": "Men Jeans",
+    "category": "Fashion",
+    "price": 2200,
+    "stock": 200,
+    "specs": {
+      "size": "32",
+      "fit": "Slim"
+    },
+    "reviews": [
+      {
+        "user": "U008",
+        "rating": 5,
+        "comment": "Perfect fit",
+        "date": "2024-01-29"
+      }
+    ]
+  },
+  {
+    "product_id": "FASH003",
+    "name": "Women T-Shirt",
+    "category": "Fashion",
+    "price": 1500,
+    "stock": 300,
+    "specs": {
+      "size": "M",
+      "material": "Cotton"
+    },
+    "reviews": [
+      {
+        "user": "U009",
+        "rating": 4,
+        "comment": "Soft fabric",
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "product_id": "FASH004",
+    "name": "Jacket Winter",
+    "category": "Fashion",
+    "price": 5500,
+    "stock": 80,
+    "specs": {
+      "size": "L",
+      "material": "Polyester"
+    },
+    "reviews": [
+      {
+        "user": "U010",
+        "rating": 5,
+        "comment": "Very warm",
+        "date": "2024-02-01"
+      }
+    ]
+  },
+  {
+    "product_id": "FASH005",
+    "name": "Sneakers Casual",
+    "category": "Fashion",
+    "price": 3500,
+    "stock": 140,
+    "specs": {
+      "size": "8",
+      "color": "White"
+    },
+    "reviews": [
+      {
+        "user": "U011",
+        "rating": 4,
+        "comment": "Stylish",
+        "date": "2024-02-02"
+      }
+    ]
+  }
+  // 👉 add the remaining products (same as JSON you already have)
+]);
+
+// ---------------------------
+// Operation 2: Basic Query
+// ---------------------------
+db.products.find(
+  { category: "Electronics", price: { $lt: 50000 } },
+  { _id: 0, name: 1, price: 1, stock: 1 }
+);
+
+// ---------------------------
+// Operation 3: Review Analysis
+// ---------------------------
+db.products.aggregate([
+  { $addFields: { avg_rating: { $avg: "$reviews.rating" } } },
+  { $match: { avg_rating: { $gte: 4.0 } } },
+  { $project: { _id: 0, name: 1, avg_rating: 1 } }
+]);
+
+// ---------------------------
+// Operation 4: Update Operation
+// ---------------------------
+db.products.updateOne(
+  { product_id: "ELEC001" },
+  {
+    $push: {
+      reviews: {
+        user: "U999",
+        rating: 4,
+        comment: "Good value",
+        date: new Date()
+      }
+    }
+  }
+);
+
+// ---------------------------
+// Operation 5: Complex Aggregation
+// ---------------------------
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      avg_price: { $avg: "$price" },
+      product_count: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      category: "$_id",
+      avg_price: 1,
+      product_count: 1
+    }
+  },
+  { $sort: { avg_price: -1 } }
+]);
