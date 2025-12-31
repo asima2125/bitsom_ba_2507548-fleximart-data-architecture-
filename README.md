@@ -2,7 +2,7 @@
 
 ## Student Information
 
-**Name:** Priyansh Awasthi  
+**Name:** Asima Maharana 
 **Project Title:** FlexiMart – End-to-End Data Architecture  
 **Technologies:** MySQL, MongoDB, Python  
 **Architecture Type:** Hybrid (OLTP + NoSQL + OLAP)
