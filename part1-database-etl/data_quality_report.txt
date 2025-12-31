@@ -1,0 +1,12 @@
+customers_read: 21
+customers_dropped_missing: 1
+customers_duplicates: 1
+customers_loaded: 19
+products_read: 20
+products_duplicates: 1
+products_loaded: 18
+sales_read: 31
+sales_invalid_customer: 2
+sales_invalid_product: 2
+orders_created: 18
+order_items_created: 27
