@@ -1,0 +1,22 @@
+first_name,last_name,email,phone,city,registration_date
+John,Doe,john.doe@gmail.com,9876543210,Mumbai,12-01-2024
+Jane,Smith,jane.smith@gmail.com,(+91) 91234-56789,Delhi,2024/01/15
+Amit,Sharma,amit.sharma@gmail.com,9123456789,Bangalore,2024-01-18
+Riya,Gupta,riya.gupta@gmail.com,+91-9988776655,Pune,18-01-2024
+Rahul,Verma,rahul.verma@gmail.com,99887 76655,Chennai,2024-01-20
+Sneha,Iyer,sneha.iyer@gmail.com,98765-43210,Coimbatore,21-01-2024
+Arjun,Mehta,arjun.mehta@gmail.com,(091)9876543210,Ahmedabad,2024/01/22
+Neha,Patel,neha.patel@gmail.com,9876543210,Surat,2024-01-23
+Karan,Malhotra,karan.m@gmail.com,987654321,Delhi,2024-01-24
+Pooja,Nair,pooja.nair@gmail.com,,Kochi,2024-01-25
+Vikas,Khanna,vikas.khanna@gmail.com,9876543210,Amritsar,26-01-2024
+Anjali,Kapoor,anjali.kapoor@gmail.com,9123456780,Delhi,2024-01-27
+Rohit,Singh,rohit.singh@gmail.com,9988776655,Lucknow,28-01-2024
+Manish,Agarwal,manish.agarwal@gmail.com,9876543210,Jaipur,2024-01-29
+Priya,Chopra,priya.chopra@gmail.com,+91 98765 43210,Mumbai,2024/01/30
+Sunil,Jain,sunil.jain@gmail.com,9876543210,Indore,2024-01-31
+Deepak,Yadav,deepak.yadav@gmail.com,9876543210,Gurgaon,01-02-2024
+Neha,Patel,neha.patel@gmail.com,9876543210,Surat,2024-01-23
+Alok,Mishra,,9876543210,Bhopal,2024-02-02
+Kriti,Saxena,kriti.saxena@gmail.com,98765-12345,Noida,2024-02-03
+Ramesh,Kumar,ramesh.kumar@gmail.com,9123456789,Patna,2024-02-04

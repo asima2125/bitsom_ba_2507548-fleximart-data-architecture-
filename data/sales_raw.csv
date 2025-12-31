@@ -1,0 +1,32 @@
+customer_email,product_name,category,quantity,order_date
+john.doe@gmail.com,Laptop Pro,Electronics,1,2024-01-15
+john.doe@gmail.com,Wireless Earbuds,Electronics,2,15-01-2024
+jane.smith@gmail.com,Smartphone X,Electronics,1,2024/01/16
+amit.sharma@gmail.com,Office Chair,Furniture,2,2024-01-18
+riya.gupta@gmail.com,Running Shoes,Fashion,1,18-01-2024
+rahul.verma@gmail.com,LED TV 42",Electronics,1,2024-01-20
+sneha.iyer@gmail.com,Microwave Oven,Home Appliances,1,2024-01-21
+arjun.mehta@gmail.com,Washing Machine,Home Appliances,1,2024/01/22
+neha.patel@gmail.com,Refrigerator 300L,Home Appliances,1,2024-01-23
+karan.m@gmail.com,Sofa Set,Furniture,1,2024-01-24
+pooja.nair@gmail.com,Jeans Men,Fashion,3,2024-01-25
+vikas.khanna@gmail.com,T-Shirt Women,Fashion,2,2024-01-26
+anjali.kapoor@gmail.com,Air Conditioner 1.5T,Electronics,1,2024-01-27
+rohit.singh@gmail.com,Bluetooth Speaker,Electronics,2,2024-01-28
+manish.agarwal@gmail.com,Water Purifier,Home Appliances,1,2024-01-29
+priya.chopra@gmail.com,Smartwatch Z,Electronics,1,2024-01-30
+sunil.jain@gmail.com,Bookshelf,Furniture,1,2024-01-31
+deepak.yadav@gmail.com,Ceiling Fan,Home Appliances,2,01-02-2024
+neha.patel@gmail.com,Refrigerator 300L,Home Appliances,1,2024-01-23
+alok.mishra@gmail.com,Laptop Pro,Electronics,1,2024-02-02
+kriti.saxena@gmail.com,Running Shoes,Fashion,1,2024-02-03
+ramesh.kumar@gmail.com,Office Chair,Furniture,1,2024-02-04
+john.doe@gmail.com,Laptop Pro,Electronics,1,2024-01-15
+fake.user@gmail.com,Smartphone X,Electronics,1,2024-01-20
+amit.sharma@gmail.com,Unknown Product,Electronics,1,2024-01-22
+rahul.verma@gmail.com,Jeans Men,Fashion,2,2024/01/20
+pooja.nair@gmail.com,T-Shirt Women,Fashion,1,2024-01-25
+jane.smith@gmail.com,Wireless Earbuds,Electronics,1,2024-01-16
+sunil.jain@gmail.com,LED TV 42",Electronics,1,2024-01-31
+deepak.yadav@gmail.com,Ceiling Fan,Home Appliances,1,01-02-2024
+rohit.singh@gmail.com,Smartphone X,Electronics,1,2024-01-28
