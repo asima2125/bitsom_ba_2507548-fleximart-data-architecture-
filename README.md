@@ -24,32 +24,6 @@ The architecture follows **industry best practices** by separating transactional
 
 ## 2. High-Level Architecture
 
-# FlexiMart Data Architecture Project
-
-## Student Information
-
-**Name:** Priyansh Awasthi  
-**Project Title:** FlexiMart – End-to-End Data Architecture  
-**Technologies:** MySQL, MongoDB, Python  
-**Architecture Type:** Hybrid (OLTP + NoSQL + OLAP)
-
----
-
-## 1. Project Overview
-
-FlexiMart is a simulated e-commerce data architecture project designed to demonstrate the complete lifecycle of enterprise data handling. The project covers:
-
-- Transactional data storage (OLTP)
-- Data cleaning and ETL pipelines
-- NoSQL usage for flexible product catalogs
-- Data warehouse design for analytical reporting
-
-The architecture follows **industry best practices** by separating transactional workloads, flexible document storage, and analytical processing into independent systems.
-
----
-
-## 2. High-Level Architecture
-
     Raw CSV Files
         ↓
     Python ETL
